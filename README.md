@@ -2,6 +2,19 @@
 
 该工程是SuperMap推出的一个全景制作方案，利用第三方开源软件SaladoPlayer与iClient产品结合为用户提供方便可用的全景制作方案。
 
+全景方案主页地址：http://panotest.aliapp.com
+
+iClient For JavaScript 全景范例: http://panotest.aliapp.com/JSDemo/index.html
+
+iClient For Flash 全景范例: http://panotest.aliapp.com/FlexDemo/FlexWithSaladoPlayer.html
+
+iClient For Flash3D全景范例: http://panotest.aliapp.com/Flash3DDemo/flash3DViewer.html
+
+SaladoPlayer结合JS地图插件: http://panotest.aliapp.com/SaladoPlayerJSMapPlugin/index.html
+
+iClient For JavaScript综合范例: http://panotest.aliapp.com/JSComDemo/index.html
+
+iClient For Flash3D综合范例: http://panotest.aliapp.com/Flash3DComDemo/flash3DViewer.html
 
 ### 二、总结
 
