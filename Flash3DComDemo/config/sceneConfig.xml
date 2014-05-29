@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SaladoPlayer>
+    <global debug="false">
+        <panoramas firstPanorama="超图前门"/>
+        <control transition="time:0.1" mouseDrag="enabled:true" mouseWheelTrap="true"></control>
+        <branding visible="false"></branding>
+    </global>
+    <!--全景场景设置-->
+    <panoramas>
+        <panorama id="超图前门" path="~scenes/dz_qianmen/qianmen_f.xml" onEnter="hideBubble">
+            <image id="hs0_1" target="一楼大厅" location="pan:0,tilt:0"
+                   transform="flat:false,scaleX:0.3,scaleY:0.3,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:dating,onOut:hideBubble"/>
+            <image id="hs0_2" transform="flat:false,scaleX:0.2,scaleY:0.2,scaleZ:0.2"
+                   path="~img/showInfo.png" location="pan:0,tilt:8"
+                   mouse="onClick:toggleOpenBox"
+                    />
+        </panorama>
+        <panorama id="一楼大厅" path="~scenes/dz_dating/dating_f.xml" onEnter="openMenu">
+            <image id="hs1_1" target="一楼餐厅" location="pan:300,tilt:-15"
+                   transform="flat:false,scaleX:0.3,scaleY:0.3,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:canting,onOut:hideBubble"
+                    />
+            <image id="hs1_2" target="六楼前台" location="pan:2,tilt:0"
+                   transform="flat:false,scaleX:0.3,scaleY:0.3,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:qiantai,onOut:hideBubble"/>
+            <image id="hs1_3" target="超图前门" location="pan:180,tilt:-10"
+                   transform="flat:false,scaleX:0.3,scaleY:0.3,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:qianmen,onOut:hideBubble"/>
+        </panorama>
+        <panorama id="一楼餐厅" view="minTilt:-20" path="~scenes/dz_canting/canting_f.xml" onEnter="hideBubble">
+            <image id="hs2_1" target="一楼大厅" location="pan:17,tilt:-5"
+                   transform="flat:false,scaleX:0.3,scaleY:0.3,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:dating,onOut:hideBubble"/>
+        </panorama>
+        <panorama id="六楼前台" view="minTilt:-20" path="~scenes/dz_qiantai/qiantai_f.xml" onEnter="hideBubble">
+            <image id="hs3_1" target="六楼办公区" location="pan:262,tilt:-6"
+                   transform="flat:false,scaleX:0.3,scaleY:0.3,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:shiyebu,onOut:hideBubble"/>
+            <image id="hs3_2" target="七楼办公区" location="pan:250,tilt:0"
+                   transform="flat:false,scaleX:0.3,scaleY:0.5,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:yanfazhongxin,onOut:hideBubble"/>
+            <image id="hs3_3" target="五楼办公区" location="pan:250,tilt:-10"
+                   transform="flat:false,scaleX:0.3,scaleY:0.5,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot2.png"
+                   mouse="onOver:zhichizhongxin,onOut:hideBubble"/>
+            <image id="hs3_4" target="一楼大厅" location="pan:180,tilt:-10"
+                   transform="flat:false,scaleX:0.3,scaleY:0.3,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:dating,onOut:hideBubble"/>
+        </panorama>
+        <panorama id="五楼办公区" view="minTilt:-20" path="~scenes/dz_zhichizhongxin/zhichizhongxin_f.xml" onEnter="hideBubble">
+            <image id="hs6_1" target="六楼前台" location="pan:58,tilt:0"
+                   transform="flat:false,scaleX:0.3,scaleY:0.3,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:qiantai,onOut:hideBubble"/>
+        </panorama>
+        <panorama id="六楼办公区" view="minTilt:-20" path="~scenes/dz_shiyebu/shiyebu_f.xml" onEnter="hideBubble">
+            <image id="hs4_1" target="六楼前台" location="pan:300,tilt:-10"
+                   transform="flat:false,scaleX:0.3,scaleY:0.3,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:qiantai,onOut:hideBubble"/>
+        </panorama>
+        <panorama id="七楼办公区" view="minTilt:0" path="~scenes/dz_yanfazhongxin/yanfazhongxin_f.xml" onEnter="hideBubble">
+            <image id="hs5_1" target="六楼前台" location="pan:0,tilt:0"
+                   transform="flat:false,scaleX:0.3,scaleY:0.3,scaleZ:0.3"
+                   path="~img/vtourskin_hotspot.png"
+                   mouse="onOver:qiantai,onOut:hideBubble"/>
+        </panorama>
+    </panoramas>
+    <modules>
+        <InfoBubble path="~modules/infobubble/InfoBubble-1.3.3.swf">
+            <bubbles>
+                <text id="qianmen" text="超图前门[n]"/>
+                <text id="canting" text="一楼餐厅[n]"/>
+                <text id="dating" text="一楼大厅[n]"/>
+                <text id="qiantai" text="六楼前台[n]"/>
+                <text id="shiyebu" text="六楼办公区[n]"/>
+                <text id="yanfazhongxin" text="七楼办公区[n]"/>
+                <text id="zhichizhongxin" text="五楼办公区[n]"/>
+            </bubbles>
+        </InfoBubble>
+        <MenuScroller path="~modules/menuscroller/MenuScroller-1.3.3.swf">
+            <window open="false" onOpen="onMenuOpen" onClose="onMenuClose" openTween="time:0.5" closeTween="time:0.5"/>
+            <close path="~img/dark_left_close.png" align="vertical:middle" move="horizontal:40"/>
+            <scroller overTween="transition:Linear.easeNone,time:0.5"/>
+            <groups>
+                <group id="g1">
+                    <element target="超图前门" path="~thumbnails/qianmen.jpg" mouse="onOver:qianmen,onOut:hideBubble"/>
+                    <element target="一楼大厅" path="~thumbnails/dating.jpg" mouse="onOver:dating,onOut:hideBubble"/>
+                    <element target="一楼餐厅" path="~thumbnails/canting.jpg" mouse="onOver:canting,onOut:hideBubble"/>
+                    <element target="六楼前台" path="~thumbnails/qiantai.jpg" mouse="onOver:qiantai,onOut:hideBubble"/>
+                    <element target="五楼办公区" path="~thumbnails/zhichizhongxin.jpg" mouse="onOver:zhichizhongxin,onOut:hideBubble"/>
+                    <element target="六楼办公区" path="~thumbnails/shiyebu.jpg" mouse="onOver:shiyebu,onOut:hideBubble"/>
+                    <element target="七楼办公区" path="~thumbnails/yanfazhongxin.jpg" mouse="onOver:yanfazhongxin,onOut:hideBubble"/>
+                </group>
+            </groups>
+        </MenuScroller>
+        <ImageButton path="~modules/imagebutton/ImageButton-1.3.swf">
+            <button id="buttonMenu" path="~img/dark_left_open.png" action="openMenu">
+                <window align="vertical:middle,horizontal:left" move="horizontal:0,vertical:0" openTween="time:0" closeTween="time:0"/>
+            </button>
+        </ImageButton>
+        <InfoBox path="~modules/infobox/InfoBox-1.0.swf">
+            <window open="true" transition="type:slideUp" openTween="transition:Bounce.easeOut,time:0.75" closeTween="transition:Expo.easeIn,time:0.75"/>
+            <close path="~img/close.png" move="vertical:-10,horizontal:10"/>
+            <viewer path="~modules/infobox/skins/elements_dark_21x21.png"/>
+            <articles>
+                <article id="a1" path="~img/text.txt"/>
+            </articles>
+        </InfoBox>
+    </modules>
+    <actions>
+        <action id="canting" content="InfoBubble.show(canting)"/>
+        <action id="dating" content="InfoBubble.show(dating)"/>
+        <action id="qiantai" content="InfoBubble.show(qiantai)"/>
+        <action id="shiyebu" content="InfoBubble.show(shiyebu)"/>
+        <action id="yanfazhongxin" content="InfoBubble.show(yanfazhongxin)"/>
+        <action id="zhichizhongxin" content="InfoBubble.show(zhichizhongxin)"/>
+        <action id="qianmen" content="InfoBubble.show(qianmen)"/>
+        <action id="hideBubble" content="InfoBubble.hide()"/>
+
+        <action id="openMenu" content="MenuScroller.setOpen(true)"/>
+        <action id="onMenuOpen" content="ImageButton.setOpen(buttonMenu,false)"/>
+        <action id="onMenuClose" content="SaladoPlayer.waitThen(0.5,openButtonMenu)"/>
+        <action id="openButtonMenu" content="ImageButton.setOpen(buttonMenu,true)"/>
+
+        <action id="toggleOpenBox" content="InfoBox.toggleOpen()"/>
+    </actions>
+</SaladoPlayer>

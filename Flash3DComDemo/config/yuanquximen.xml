@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SaladoPlayer>
+    <global debug="false">
+        <panoramas firstPanorama="园区西门"/>
+        <branding visible="false"></branding>
+        <control transition="time:0.1" mouseDrag="enabled:true" mouseWheelTrap="true"></control>
+    </global>
+    <!--全景场景设置-->
+    <panoramas>
+        <panorama id="园区西门" path="~scenes/dz_yuanquximen/yuanquximen_f.xml"></panorama>
+    </panoramas>
+</SaladoPlayer>

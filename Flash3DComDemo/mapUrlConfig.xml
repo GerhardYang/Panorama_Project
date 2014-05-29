@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<node>
+<!-- 	<url name="myUrl" value="http://192.168.12.175:8090/iserver/services/map-beijing/rest/maps/cbd"/> -->
+	<url name="myUrl" value="http://support.supermap.com.cn:8090/iserver/services/map-beijing/rest/maps/beijing"/>
+</node>
