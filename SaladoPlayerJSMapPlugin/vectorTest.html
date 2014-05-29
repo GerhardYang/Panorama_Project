@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>SuperMap Rotate Features Example</title>
+    <script src='./jssupermap/libs/SuperMap.Include.js'></script>
+
+    <script type="text/javascript">
+        var map, layer,vectorLayer, pointFeature, lineFeature, polygonFeature;
+        var host = document.location.toString().match(/file:\/\//) ? "http://localhost:8090" : 'http://' + document.location.host,
+                url = host + "/iserver/services/map-world/rest/maps/World";
+        function init() {
+            map = new SuperMap.Map("map");
+
+            layer = new SuperMap.Layer.TiledDynamicRESTLayer("China", url, {transparent: true, cacheEnabled: true, redirect: true}, {maxResolution: "auto"});
+            vectorLayer = new SuperMap.Layer.Vector("Simple Geometry");
+            layer.events.on({"layerInitialized": addLayer});
+            // create a point feature
+            var point = new SuperMap.Geometry.Point(117, 46);
+            var polygonFeature = drawCircle(point, 1);
+            var PolygonCurve = drawCurve(point, 1.2, 60, 270);
+
+            vectorLayer.addFeatures([polygonFeature, PolygonCurve]);
+        }
+
+        function drawCurve(point, radius, fov, pan){
+            pan = 90 - (pan + fov/2);
+            var pointList = [];
+            for (var i = pan; i < (pan + fov); i++) {
+                var newPoint = new SuperMap.Geometry.Point(
+                        x = Math.cos(Math.PI / 180 * i) * radius + point.x,
+                        y = Math.sin(Math.PI / 180 * i) * radius + point.y
+                )
+                pointList.push(newPoint);
+            }
+            pointList.push(point);
+            var linearRing = new SuperMap.Geometry.LinearRing(pointList);
+            var curveFeature = new SuperMap.Feature.Vector(new SuperMap.Geometry.Polygon([linearRing]));
+            return curveFeature;
+        }
+
+        function rotateFeature(feature, angle, origin) {
+            feature.geometry.rotate(angle, origin);
+            feature.layer.drawFeature(feature);
+        }
+
+        function drawCircle(point, r)
+        {
+            var pointList=[];
+            for (var i = 0; i < 360; i += 6) {
+                var newPoint = new SuperMap.Geometry.Point(
+                        x = Math.cos(Math.PI / 180 * i) * r + point.x,
+                        y = Math.sin(Math.PI / 180 * i) * r + point.y
+                )
+                pointList.push(newPoint);
+            }
+            var linearRing = new SuperMap.Geometry.LinearRing(pointList);
+            var polygonFeature = new SuperMap.Feature.Vector(new SuperMap.Geometry.Polygon([linearRing]));
+
+            return polygonFeature;
+        }
+
+        function addLayer() {
+            var center = new SuperMap.LonLat(117, 46);
+            map.addLayers([layer,vectorLayer]);
+            map.setCenter(center, 3);
+        }
+    </script>
+</head>
+<body onload="init()">
+<div id="map" style="width: 500px;height: 500px;background: royalblue"></div>
+</body>
+</html>

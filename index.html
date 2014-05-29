@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://v2.bootcss.com/examples/carousel.html# -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>SuperMap全景方案</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="http://v2.bootcss.com/assets/css/bootstrap.css" rel="stylesheet">
+<link href="http://v2.bootcss.com/assets/css/bootstrap-responsive.css" rel="stylesheet">
+<style>
+@font-face {
+    font-family: 'hzgb';
+    src: url('images/hzgb.ttf');
+}
+
+@font-face {
+    font-family: 'hdzb';
+    src: url('images/HDZB_41.TTF');
+}
+
+body {
+    font-family: "hdzb";
+}
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin-top: 20px;
+    margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+}
+
+.navbar-wrapper .navbar {
+
+}
+
+    /* Remove border and change up box shadow for more contrast */
+.navbar .navbar-inner {
+    border: 0;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+}
+
+    /* Downsize the brand/project name a bit */
+.navbar .brand {
+    padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+    /* Navbar links: increase padding for taller navbar */
+.navbar .nav > li > a {
+    padding: 15px 20px;
+    color: white;
+}
+
+    /* Offset the responsive button for proper vertical alignment */
+.navbar .btn-navbar {
+    margin-top: 10px;
+}
+
+.navbar .nav > li > a:hover {
+    color: #00cee1;
+}
+
+.navbar .brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 160px;
+    color: white;
+    font-size: 24px;
+    font-family: "hzgb";
+}
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+.carousel {
+    margin-bottom: 60px;
+}
+
+.carousel .container {
+    position: relative;
+    z-index: 9;
+}
+
+.carousel-control {
+    height: 80px;
+    margin-top: 0;
+    font-size: 120px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+    background-color: transparent;
+    border: 0;
+    z-index: 10;
+}
+
+.carousel .item {
+    height: 500px;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
+
+.myList li {
+    list-style: none;
+    line-height: 2em;
+    font-size: 15px;
+    font-family: "微软雅黑";
+}
+
+.span4 p {
+    line-height: 2em;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    position: static;
+    width: 550px;
+    padding: 0 20px;
+    margin-top: 230px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: right;
+    color: white;
+    margin-right: 180px;
+}
+
+.carousel-caption h1,
+.carousel-caption .lead {
+    margin: 0;
+    line-height: 1.25;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+    font-family: "hdzb";
+}
+
+.carousel-caption .btn {
+    margin-top: 10px;
+}
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+.marketing .span4 {
+    text-align: left;
+}
+
+.marketing h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.marketing .span4 p.contant {
+    text-indent: 2em; /*em是相对单位，2em即现在一个字大小的两倍*/
+}
+
+    /* Featurettes
+    ------------------------- */
+
+.featurette-divider {
+    height: 2px;
+    border-top: 2px solid #cccccc;
+}
+
+.featurette {
+    padding-top: 60px; /* Vertically center images part 1: add padding above and below text. */
+    overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    padding-bottom: 60px;
+}
+
+.featurette-image {
+    margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+    margin-right: 40px;
+}
+
+.featurette-image.pull-right {
+    margin-left: 40px;
+    _width: 64px;
+    _height: 64px;
+    max-width: 64px;
+    max-height: 64px;
+    width: 64px;
+    height: 64px;
+}
+
+    /* Thin out the marketing headings */
+.featurette-heading {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+    /***footer*/
+
+.smcloud_footer {
+    width: 100%;
+    min-width: 960px;
+    text-align: left;
+    background: #363636 url(./images/foot_bg.png) repeat-x 0 top;
+    font: 12px/1.5 helvetica, arial, "hiragino sans gb", "宋体b8b\4f53", sans-serif;
+    color: #959595;
+    clear: both;
+}
+
+.smcloud_footerBox {
+    width: 770px;
+    margin: 0 auto;
+    padding: 20px 0 10px;
+    overflow: hidden;
+}
+
+.smcloud_footer_about {
+    float: left;
+    padding-top: 3px;
+    line-height: 24px;
+}
+
+.smcloud_footer_about ol, ul {
+    list-style: none;
+}
+
+.smcloud_footer_appStore {
+    float: right;
+    font-size: 14px;
+}
+
+.smcloud_footer_appStore p {
+    padding: 5px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.smcloud_footer a {
+    text-decoration: none;
+    color: #959595;
+}
+
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.smcloud_footer {
+    text-align: left;
+    font: 12px/1.5 helvetica, arial, "hiragino sans gb", "宋体b8b\4f53", sans-serif;
+    color: #959595;
+}
+
+.smcloud_footer_about li {
+    float: left;
+    width: 180px;
+    line-height: 20px;
+}
+
+.smcloud_footer_about dt {
+    font-size: 18px;
+    font-family: "Microsoft YaHei" !important;
+    color: #aaaaaa;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.smcloud_footer_about dd {
+    line-height: 24px;
+    text-align: center;
+}
+
+.smcloud_footer a {
+    text-decoration: none;
+    color: #959595;
+}
+
+.smcloud_footer_about .last {
+    border-right: 1px solid #404040;
+}
+
+.smcloud_footer_about .last1 {
+}
+
+.smcloud_footer_copyright {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 0 0px;
+    overflow: hidden;
+    _zoom: 1;
+    border-top: 1px solid #404040;
+}
+
+.customBtn {
+    background-color: white;
+    background-image: none;
+    color: #000000;
+    float: right;
+    width: 150px;
+    height: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+
+.customBtn:hover{
+    background-color: #00cee1;
+    color: white;
+}
+
+.mybtnCont {
+    margin-left: 10px;
+}
+
+.customBtn1 {
+    background-color: #858585;
+    background-image: none;
+    color: #ffffff;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+}
+
+.customRow {
+    background-image: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    margin-bottom: 60px;
+}
+
+.customContent {
+    background-color: #f0f0f0;
+    width: 100%;
+}
+
+.customContentChild {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.customImg {
+    margin: 20px 20px 20px 20px;
+    float: left;
+}
+
+.customImgCon {
+    width: 200px;
+    height: 200px;
+    padding-top: 50px;
+    float: left;
+}
+
+.customLead {
+    padding-left: 40px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 25px;
+    font-family: "hdzb";
+}
+
+.container {
+    width: 100%;
+}
+
+.hightlightFont {
+    color: #00cee1;
+}
+
+.span4{
+    width: 300px;
+}
+
+.carousel-control.right {
+    right: 20px;
+    left: auto;
+}
+</style>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="../assets/js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+      href="http://v2.bootcss.com/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+      href="http://v2.bootcss.com/assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+      href="http://v2.bootcss.com/assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://v2.bootcss.com/assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="http://v2.bootcss.com/assets/ico/favicon.png">
+<style id="holderjs-style" type="text/css">.holderjs-fluid {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0
+}</style>
+</head>
+<body>
+<!-- NAVBAR
+================================================== -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a style="width: 200px" class="brand active" href=""><img
+                    style="margin: 0; padding: 0; display: inline; width: 36px; height: 50px;" src="images/全景logo.png"
+                    width="36px"
+                    height="50px"><span style="margin-left: 3px">全景方案</span></a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav" style="margin-right: 160px;float: right;font-size: 15px;">
+                    <li><a href="#">案例</a></li>
+                    <li><a href="#summary">总结</a></li>
+                    <li><a href="#attention">注意</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="./images/slide-01.jpg"
+                 alt="First slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1><span class="hightlightFont">iClient For JavaScript</span> 全景范例</h1>
+
+                    <p><a class="btn btn-lg btn-primary customBtn" href="./JSDemo/index.html" role="button"
+                          target="_blank">JavaScript全景图范例</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./images/slide-02.jpg"
+                 alt="Second slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1><span class="hightlightFont">iClient For Flash</span> 全景范例</h1>
+
+                    <p><a class="btn btn-lg btn-primary customBtn" href="./FlexDemo/FlexWithSaladoPlayer.html"
+                          role="button"
+                          target="_blank">Flash全景图范例</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./images/slide-03.jpg"
+                 alt="Third slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1><span class="hightlightFont">iClient For Flash3D</span>全景范例</h1>
+
+                    <p><a class="btn btn-lg btn-primary customBtn" href="./Flash3DDemo/flash3DViewer.html" role="button"
+                          target="_blank">Flash3D全景图范例</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./images/slide-01.jpg"
+                 alt="Third slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>SaladoPlayer结合<span class="hightlightFont">JS地图插件</span></h1>
+
+                    <p><a class="btn btn-lg btn-primary customBtn" href=".\SaladoPlayerJSMapPlugin\index.html"
+                          role="button"
+                          target="_blank">JS插件开发范例</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./images/slide-02.jpg"
+                 alt="Third slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1><span class="hightlightFont">iClient For JavaScript</span>综合范例</h1>
+
+                    <p><a class="btn btn-lg btn-primary customBtn" href=".\JSComDemo\index.html" role="button"
+                          target="_blank">JavaScript综合范例</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./images/slide-03.jpg"
+                 alt="Third slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1><span class="hightlightFont">iClient For Flash3D</span>综合范例</h1>
+
+                    <p><a class="btn btn-lg btn-primary customBtn" href=".\Flash3DComDemo\flash3DViewer.html"
+                          role="button" target="_blank">Flash3D综合范例</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+</div>
+<!-- /.carousel -->
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+<!-- Three columns of text below the carousel -->
+<div class="row customRow">
+    <div class="span4">
+        <!--<img class="img-circle" alt="140x140"-->
+        <!--src="./images/dataCreate.png"-->
+        <!--style="width: 140px; height: 140px;">-->
+
+        <h2>数据制作</h2>
+
+        <p class="contant">全景图片的制作流程：拍摄原始照片， 图片拼接，修图，
+            具体方法可以参考<a href="http://www.webtudou.com/?p=1088" target="_blank">
+                《使用开源工具创建全景》</a>，这篇文章介绍了使用开源工具创建全景的详细步骤</p>
+
+        <p class="mybtnCont"><a class="btn customBtn1" href="http://www.webtudou.com/?p=1088" target="_blank">查看文章
+            »</a></p>
+    </div>
+    <!-- /.span4 -->
+    <div class="span4">
+        <!--<img class="img-circle" alt="140x140"-->
+        <!--src="./images/showPano.png"-->
+        <!--style="width: 140px; height: 140px;">-->
+
+        <h2>显示场景</h2>
+
+        <p class="contant">场景展示使用SaladoPlayer,
+            其场景的展示与配置文件密切相关，范例提供了SaladoPlayer配置
+            文件批量生成工具，该工具的使用请参考<a href="http://www.webtudou.com/?p=1270" target="_blank">
+            《配置文件工具使用说明》</a></p>
+
+        <p class="mybtnCont"><a class="btn customBtn1" href="http://www.webtudou.com/?p=1270" target="_blank">查看文章
+            »</a></p>
+    </div>
+    <!-- /.span4 -->
+    <div class="span4">
+        <!--<img class="img-circle" alt="140x140"-->
+        <!--src="./images/codeDownload.png"-->
+        <!--style="width: 140px; height: 140px;">-->
+
+        <h2>源码下载</h2>
+
+        <p class="contant">示例代码可以到百度云盘上(密码：zdyz)下
+            载，其中Flash3D与JavaScript高级范例可以作为项目参考，对于高级用户可基于SaladoPlayer的源码进行扩展应用</p>
+
+        <p class="mybtnCont"><a class="btn customBtn1" href="http://pan.baidu.com/s/1hq5Nafi" target="_blank">下载源码
+            »</a></p>
+    </div>
+    <!-- /.span4 -->
+</div>
+<!-- /.row -->
+
+
+<!-- START THE FEATURETTES -->
+
+<div class="customContent">
+    <div class="customContentChild">
+        <div class="customImgCon">
+            <img class="customImg" src="./images/总结.png">
+        </div>
+        <div class="featurette" id="summary">
+            <p class="lead customLead">总的来看，我们需要下面几步：</p>
+
+            <p>
+            <ul class="myList">
+                <li>1. 创建2:1全景图片</li>
+                <li>2. 用SaladoConverter切割图片</li>
+                <li>3. 将切割好的图片资源文件夹放入scenes文件夹下</li>
+                <li>4. 运行"批量生成SaladoPlayer配置文件工具"，按照我们的要求进行设置并生成</li>
+                <li>5. 运行范例程序展示</li>
+                <li>6. 根据需要扩展和开发范例</li>
+            </ul>
+            </p>
+        </div>
+        <hr class="featurette-divider">
+        <div class="customImgCon">
+            <img class="customImg" src="./images/注意.png">
+        </div>
+        <div class="featurette" id="attention">
+            <p class="lead customLead">SuperMap for JavaScript和
+                SuperMap for Flash3D、SuperMap for Flash提供了完整的制作方案，
+                但是需要注意以下几点：</p>
+
+            <p>
+            <ul class="myList">
+                <li>1. 这里使用的全景制作软件全部都是免费开源的，其目的是为了节省开发人员的成本，以便让刚开始接触全景的人不至于承担太大的经济压力。</li>
+                <li>2.
+                    在数据制作部分，通过开源软件拼接好的全景图有一个要求，就是长与宽的比为2:1，这是因为垂直180°，水平360°的原因造成的，如果不是这个比例SaladoConverter是无法进行图片的切割的。
+                </li>
+                <li>3. 由于整个制作方案中使用的都是开源软件，所以用户是可以获取到源代码的，用户可以通过修改源代码来达到项目要求。</li>
+                <li>4.
+                    另外需要说明的是，开源软件可以免费用，但是由于其中大部分开源软件是遵照GPL协议，所以用来做项目开发是没有问题的，但如果想要用其软件作为二次开发的基础来进行商业运作则你开发出来的产品同样要开源并遵照GPL协议。
+                </li>
+                <li>5. 另外除了使用开源软件进行图像的拼接以外，还可以使用PTGui这个拼图工具进行拼接，该工具操作更加简单与高效。</li>
+                <li>6. 在修图方面，如果你对PhotoShop熟悉一些的话，使用PhotoShop能够让你的全景图更上一个档次。</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="smcloud_footer">
+        <div class="smcloud_footerBox">
+            <ul class="smcloud_footer_about">
+                <li class="last">
+                    <dl>
+                        <dt>友情链接</dt>
+                        <dd>
+                            <a href="http://www.dituhui.com" target="_blank"
+                               rel="nofollow" data-bn-ipg="foot-join-1">地图汇</a>
+                        </dd>
+                        <dd>
+                            <a href="http://www.supermap.com.cn" target="_blank"
+                               rel="nofollow" data-bn-ipg="foot-join-1">超图软件</a>
+                        </dd>
+                        <dd>
+                            <a href="http://www.webtudou.com" target="_blank"
+                               rel="nofollow" data-bn-ipg="foot-join-1">Web开发者博客</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="last">
+                    <dl>
+                        <dt>关于我们</dt>
+                        <dd>
+                            <a
+                                    href="http://www.supermap.com.cn/html/aboutSupermap.html"
+                                    target="_blank" rel="nofollow"
+                                    data-bn-ipg="foot-clause-1">公司简介</a>
+                        </dd>
+                        <dd>
+                            <a href="http://www.supermap.com.cn/html/Contact.html"
+                               target="_blank" rel="nofollow"
+                               data-bn-ipg="foot-clause-2">合作联系</a>
+                        </dd>
+                        <dd>
+                            <a
+                                    href="http://www.supermap.com.cn/html/newslist_1.html"
+                                    target="_blank" rel="nofollow"
+                                    data-bn-ipg="foot-clause-3">媒体报道</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="last">
+                    <dl>
+                        <dt>电话:59896738</dt>
+                        <dd>
+                            微博: <a rel="nofollow" target="_blank"
+                                   href="http://weibo.com/supermapiclient">@SuperMap_iClient</a>
+                        </dd>
+                        <dd>
+                            <p>微信:SuperMap_iClient</p>
+                        </dd>
+                        <dd>
+                            <span class="text-left">QQ交谈:</span>
+                            <span class="text-right">
+                                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=475932331&amp;site=qq&amp;menu=yes">
+                                <img height="22" width="77" border="0" src="http://wpa.qq.com/pa?p=2:406267586:41" alt="点击这里给我发消息" title="点击这里给我发消息"/>
+                                </a>
+                            </span>
+                        </dd>
+                    </dl>
+                </li>
+
+                <li class="last1">
+                    <dl>
+                        <dt>微信二维码</dt>
+                        <dd>
+                            <img alt="微信联系" title="微信联系" src="images/weixin-daodao.jpg"/>
+                        </dd>
+                        <dd>
+                            <span class="text-left">手机扫一扫哦</span>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<div class="smcloud_footer_copyright">
+    <p>
+        2009-2014 &copy; 超图&trade;iClient All rights
+        reserved. &nbsp;&nbsp;
+    </p>
+</div>
+
+
+</div>
+<!-- /.container -->
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./bootstrap/jquery.js"></script>
+<script src="./bootstrap/bootstrap-transition.js"></script>
+<script src="./bootstrap/bootstrap-alert.js"></script>
+<script src="./bootstrap/bootstrap-modal.js"></script>
+<script src="./bootstrap/bootstrap-dropdown.js"></script>
+<script src="./bootstrap/bootstrap-scrollspy.js"></script>
+<script src="./bootstrap/bootstrap-tab.js"></script>
+<script src="./bootstrap/bootstrap-tooltip.js"></script>
+<script src="./bootstrap/bootstrap-popover.js"></script>
+<script src="./bootstrap/bootstrap-button.js"></script>
+<script src="./bootstrap/bootstrap-collapse.js"></script>
+<script src="./bootstrap/bootstrap-carousel.js"></script>
+<script src="./bootstrap/bootstrap-typeahead.js"></script>
+<script>
+    !function ($) {
+        $(function () {
+            // carousel demo
+            $('#myCarousel').carousel()
+        })
+    }(window.jQuery)
+</script>
+</body>
+</html>
