@@ -1,0 +1,96 @@
+body {
+    background-image: url("../img/wavegrid.png");
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    transition: top 100ms;
+    -webkit-transition: top 100ms;
+    border: 5px solid;
+}
+
+#map {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    transition: top 100ms;
+    -webkit-transition: top 100ms;
+    border: 1px solid;
+}
+
+#SaladoPlayerDiv{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid;
+    display: none;
+}
+
+/*#InfoLeft {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 0px;
+    bottom: 20px;
+    width: 340px;
+    border: 1px solid;
+    overflow: auto;
+}*/
+
+.auth {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#closePano{
+    visibility: hidden;
+}
+
+.pano_theme_item_content{
+    position: relative;
+    width: 314px;
+    background: #fff;
+    overflow: hidden;
+    display: block;
+}
+
+.img_list{
+    overflow: hidden;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.pano_img_li {
+    width: 140px;
+    height: 80px;
+    border: 1px solid #cccccc;
+    padding: 3px;
+    text-align: center;
+    float: left;
+    list-style: none;
+    margin: 5px;
+}
+
+.pano_img_li:hover{
+    border:  1px solid #0088ff;;
+}
+
+.pano_img{
+    width: 130px;
+    height: 70px;
+    margin-top: 5px;
+}
