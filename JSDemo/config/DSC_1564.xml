@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SaladoPlayer>
+  <global debug="false">
+      <panoramas firstPanorama="DSC_1564"/>
+      <control transition="time:0.1" mouseDrag="enabled:true" mouseWheelTrap="true"></control>
+      <branding visible="false"></branding>
+  </global>
+  <panoramas>
+    <panorama id="DSC_1564" view="minTilt:0" path="~scenes/dz_DSC_1564/DSC_1564_f.xml"/>
+  </panoramas>
+</SaladoPlayer>

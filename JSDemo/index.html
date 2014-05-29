@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>全景地图</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/application.css">
+    <script type="text/javascript" src="./js/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="SuperMap/libs/SuperMap.Include.js"></script>
+    <script type="text/javascript" src="./js/application.js"></script>
+    <!-- 这个脚本用来加载swf全景 -->
+    <script type="text/javascript" src="./viewer/embed/swfobject.js"></script>
+</head>
+<body>
+<div class="auth">
+    <h2>SuperMap For JavaScript-SaladoPlayer</h2>
+</div>
+<div id="container">
+    <div id="InfoLeft">
+        <span class="btn" id="closePano">关闭全景</span>
+        <div id="pano_list_div" class="pano_list_content" style="">
+            <ul class="img_list clearfix" id="imgList">
+            </ul>
+        </div>
+    </div>
+    <div id="map"></div>
+    <div id="SaladoPlayerDiv"></div>
+</div>
+</body>
+</html>

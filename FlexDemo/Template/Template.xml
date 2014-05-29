@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SaladoPlayer>
+  <global debug="false">
+    <panoramas firstPanorama="{currentSceneName}"/>
+  </global>
+  <panoramas>
+    <panorama id="{currentSceneName}" view="minTilt:0" path="~scenes/dz_{currentSceneName}/{currentSceneName}_f.xml"/>
+  </panoramas>
+</SaladoPlayer>
