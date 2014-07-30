@@ -3,7 +3,7 @@
     <global debug="false">
         <panoramas firstPanorama="园区中心"/>
         <branding visible="false"></branding>
-        <control transition="time:0.1" mouseDrag="enabled:true" mouseWheelTrap="true"></control>
+        <control transition="time:0.1" mouseDrag="enabled:true" mouseWheelTrap="false"></control>
     </global>
     <!--全景场景设置-->
     <panoramas>

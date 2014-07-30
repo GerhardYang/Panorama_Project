@@ -2,7 +2,7 @@
 <SaladoPlayer>
   <global debug="false">
       <panoramas firstPanorama="DSC_1564"/>
-      <control transition="time:0.1" mouseDrag="enabled:true" mouseWheelTrap="true"></control>
+      <control transition="time:0.1" mouseDrag="enabled:true" mouseWheelTrap="false"></control>
       <branding visible="false"></branding>
   </global>
   <panoramas>
