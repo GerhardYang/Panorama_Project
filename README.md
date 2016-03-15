@@ -2,13 +2,13 @@
 
 该工程是SuperMap推出的一个全景制作方案，利用第三方开源软件SaladoPlayer与iClient产品结合为用户提供方便可用的全景制作方案。
 
-全景方案主页地址：http://www.supermapol.com/lab/Panorama/index.html
+全景方案主页地址：http://www.supermapol.com/lab/panorama/index.html
 
-iClient For JavaScript 全景范例: http://www.supermapol.com/lab/Panorama/JSDemo/index.html
+iClient For JavaScript 全景范例: http://www.supermapol.com/lab/panorama/JSDemo/index.html
 
-iClient For Flash 全景范例: http://www.supermapol.com/lab/Panorama/FlexDemo/FlexWithSaladoPlayer.html
+iClient For Flash 全景范例: http://www.supermapol.com/lab/panorama/FlexDemo/FlexWithSaladoPlayer.html
 
-iClient For Flash3D全景范例: http://www.supermapol.com/lab/Panorama/Flash3DDemo/flash3DViewer.html
+iClient For Flash3D全景范例: http://www.supermapol.com/lab/panorama/Flash3DDemo/flash3DViewer.html
 
 SaladoPlayer结合JS地图插件: http://www.supermapol.com/lab/panorama/SaladoPlayerJSMapPlugin/index.html
 
