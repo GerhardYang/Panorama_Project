@@ -10,11 +10,11 @@ iClient For Flash 全景范例: http://www.supermapol.com/lab/Panorama/FlexDemo/
 
 iClient For Flash3D全景范例: http://www.supermapol.com/lab/Panorama/Flash3DDemo/flash3DViewer.html
 
-SaladoPlayer结合JS地图插件: http://www.supermapol.com/lab/Panorama/SaladoPlayerJSMapPlugin/index.html
+SaladoPlayer结合JS地图插件: http://www.supermapol.com/lab/panorama/SaladoPlayerJSMapPlugin/index.html
 
-iClient For JavaScript综合范例: http://www.supermapol.com/lab/Panorama/JSComDemo/index.html
+iClient For JavaScript综合范例: http://www.supermapol.com/lab/panorama/JSComDemo/index.html
 
-iClient For Flash3D综合范例: http://www.supermapol.com/lab/Panorama/Flash3DComDemo/flash3DViewer.html
+iClient For Flash3D综合范例: http://www.supermapol.com/lab/panorama/Flash3DComDemo/flash3DViewer.html
 
 ### 二、总结
 
